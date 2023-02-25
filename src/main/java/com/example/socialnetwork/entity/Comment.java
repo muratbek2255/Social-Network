@@ -4,8 +4,6 @@ import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
-import java.sql.Date;
-
 
 @Getter
 @Setter
@@ -19,9 +17,6 @@ public class Comment extends CrudTime{
 
     @Column(name = "text")
     String text;
-
-    @Column(name = "published")
-    Date published;
 
     @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id")

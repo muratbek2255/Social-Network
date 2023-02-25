@@ -8,7 +8,9 @@ import com.example.socialnetwork.entity.User;
 import com.example.socialnetwork.entity.enumClass.Role;
 import com.example.socialnetwork.repository.UserRepository;
 import com.example.socialnetwork.security.JwtService;
+
 import jakarta.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

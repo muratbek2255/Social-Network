@@ -21,9 +21,6 @@ public class Post extends CrudTime{
     @Column(name = "text")
     String text;
 
-    @Column(name = "published")
-    Date published;
-
     @Column(name = "moderation")
     Boolean moderation;
 

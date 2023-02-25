@@ -50,10 +50,10 @@ public class User implements UserDetails {
     String bio;
 
     @Column(name = "email")
-    private String email;
+    String email;
 
     @Column(nullable = false, name = "password")
-    private String password;
+    String password;
 
     @Column(name = "github")
     String github;
@@ -72,9 +72,9 @@ public class User implements UserDetails {
     @Enumerated(EnumType.STRING)
     Role role;
 
-    private Boolean locked = false;
+    Boolean locked = false;
 
-    private Boolean enabled = false;
+    Boolean enabled = false;
 
 
     @Override
