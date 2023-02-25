@@ -38,7 +38,7 @@ public class User implements UserDetails {
     String middleName;
 
     @Column(name = "first_time_login")
-    Timestamp first_time_login;
+    Timestamp firstTimeLogin;
 
     @Column(name = "phone")
     String phoneNumber;
