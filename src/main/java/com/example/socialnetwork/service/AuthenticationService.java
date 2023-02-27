@@ -73,23 +73,8 @@ public class AuthenticationService {
 
         var jwtToken = jwtService.generateToken(user);
 
-        String token = UUID.randomUUID().toString();
-
-        ConfirmationToken confirmationToken = new ConfirmationToken(
-                token,
-                LocalDateTime.now(),
-                LocalDateTime.now().plusMinutes(15),
-                user
-        );
-        conformationTokenService.saveTokenConformation(confirmationToken);
-
-        String link = "http://localhost:8000/api/v1/auth/register/confirm?token=" + token;
-
-        emailSenderService.send(registerRequest.getEmail(), registerRequest.getMiddleName() + link);
-
         AuthenticationResponse authenticationResponse = new AuthenticationResponse(
-                jwtToken,
-                token
+                jwtToken
         );
 
         return authenticationResponse;

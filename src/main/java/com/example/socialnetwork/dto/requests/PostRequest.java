@@ -7,7 +7,6 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.FieldDefaults;
 
-import java.sql.Date;
 
 @Getter
 @Setter
